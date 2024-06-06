@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .box {
+        font-size: 30px;
+        color: #f7df1e;
+        border-radius: 10px;
+        background: #191919;
+        font-weight: bolder;
+      }
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        height: 60px;
+        width: 120px;
+        background: white;
+        color: black;
+        font-weight: 600;
+        border-radius: 5px;
+        border: 2px solid black;
+        cursor: pointer;
+        margin: 16px;
+      }
+    </style>
+    <title>Cszinho</title>
+  </head>
+  <body>
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100 box">
+      <p class="mb-4">cszinho hoje?</p>
+      <div class="buttons-container">
+        <a href="https://www.youtube.com/shorts/0I0UxZstUQk">
+          <button class="btn btn-light mb-2">Sim</button>
+        </a>
+        <button id="no" class="btn btn-light d-none d-sm-block">Não</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let button = document.getElementById('no')
+    let height = window.innerHeight - 100
+    let width = window.innerWidth - 100
+
+    button.addEventListener('mouseover', function(){
+        button.style.position = "absolute"
+        button.style.top = Math.random() * height + "px"
+        button.style.left = Math.random() * width + "px"
+    })
+  </script>
+</html>
